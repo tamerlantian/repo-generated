@@ -51,7 +51,7 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-pages-artifact@v1
         with: 
-          path: "./out"
+          path: "./dist"
 
       - name: deploy
         id: deployment
@@ -59,5 +59,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-          folder: ./out 
+          folder: ./dist 
 
